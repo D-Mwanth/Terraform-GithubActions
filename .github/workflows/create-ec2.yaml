@@ -5,11 +5,12 @@ on:
 jobs:
   create-ec2-instance:
     runs-on: ubuntu-latest
-
+    
+    # permision are very important
     permissions:
       contents: read
       pull-requests: write
-      
+
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
@@ -33,4 +34,5 @@ jobs:
           terraform init
           terraform validate
           terraform plan 
-          terraform apply -auto-approve
+          terraform destroy -auto-approve
+          
