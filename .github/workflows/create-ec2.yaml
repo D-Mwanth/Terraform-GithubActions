@@ -5,6 +5,11 @@ on:
 jobs:
   create-ec2-instance:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+      
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
