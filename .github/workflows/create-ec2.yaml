@@ -24,7 +24,7 @@ jobs:
       - name: Apply Terraform Cofigurations
         id:   apply
         run: |
-          cd Provision-EC2-Instance/
+          cd provision-ec2-instance/
           terraform init
           terraform validate
           terraform plan 
